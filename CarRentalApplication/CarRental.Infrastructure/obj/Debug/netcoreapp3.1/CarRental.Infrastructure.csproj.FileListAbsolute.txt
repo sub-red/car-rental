@@ -1,0 +1,5 @@
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Application.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csprojAssemblyReference.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.AssemblyInfo.cs

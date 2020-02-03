@@ -12,8 +12,7 @@ namespace CarRental.Domain
         public int HorsePower { get; set; }
         public int Price { get; set; }
         public string Color { get; set; }
-        public CarManufacturer CarBrand { get; set; }
-
+        public CarManufacturer CarManufacturer { get; set; }
         public ICollection<CarCopy> Copies { get; set; }
     }
 }
