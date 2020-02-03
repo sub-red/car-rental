@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CarRental.Application/1.0.0": {
+        "dependencies": {
+          "CarRental.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CarRental.Application.dll": {}
+        }
+      },
+      "CarRental.Domain/1.0.0": {
+        "runtime": {
+          "CarRental.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarRental.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarRental.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

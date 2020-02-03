@@ -4909,23 +4909,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ELGI\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\vj_94\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ELGI\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj",
       "projectName": "CarRental.Infrastructure",
-      "projectPath": "C:\\Users\\ELGI\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\ELGI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ELGI\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\vj_94\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ELGI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vj_94\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4938,8 +4934,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\ELGI\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj": {
-              "projectPath": "C:\\Users\\ELGI\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj"
+            "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj": {
+              "projectPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj"
             }
           }
         }
