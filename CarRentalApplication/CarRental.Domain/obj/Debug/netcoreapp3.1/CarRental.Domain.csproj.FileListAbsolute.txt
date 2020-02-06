@@ -6,3 +6,11 @@ C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfo.cs
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.dll
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.deps.json
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.csprojAssemblyReference.cache
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfoInputs.cache
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfo.cs
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.pdb

@@ -8662,19 +8662,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vj_94\\.nuget\\packages\\": {}
+    "C:\\Users\\Calle\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\CarRental.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\CarRental.MVC.csproj",
       "projectName": "CarRental.MVC",
-      "projectPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\CarRental.MVC.csproj",
-      "packagesPath": "C:\\Users\\vj_94\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\obj\\",
+      "projectPath": "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\CarRental.MVC.csproj",
+      "packagesPath": "C:\\Users\\Calle\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.MVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vj_94\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Calle\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8687,11 +8691,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj": {
-              "projectPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj"
+            "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj": {
+              "projectPath": "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Application\\CarRental.Application.csproj"
             },
-            "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\vj_94\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj"
+            "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Calle\\Documents\\GitHub\\car-rental\\CarRentalApplication\\CarRental.Infrastructure\\CarRental.Infrastructure.csproj"
             }
           }
         }

@@ -28,9 +28,10 @@ namespace CarRental.Infrastructure.Persistence
 
         private static void SeedDatabase(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<CarManufacturer>().HasData(
-                new CarManufacturer { Id = 1, Manufacturer = "Hassan AB" },
-                new CarManufacturer { Id = 2, Manufacturer = "Volvo" },
+                new CarManufacturer { Id = 1, Manufacturer = "Volvo" },
+                new CarManufacturer { Id = 2, Manufacturer = "Audi" },
                 new CarManufacturer { Id = 3, Manufacturer = "BMW" }
                 );
 
@@ -40,9 +41,9 @@ namespace CarRental.Infrastructure.Persistence
                     Id = 1,
                     ManufacturerId = 1,
                     Color = "Red",
-                    Model = "BMW",
-                    HorsePower = 1337,
-                    LicensePlate = "asd123",
+                    Model = "V90",
+                    HorsePower = 140,
+                    LicensePlate = "ASD123",
                     Price = 500000
                 },
                 new CarDetails
@@ -50,19 +51,19 @@ namespace CarRental.Infrastructure.Persistence
                     Id = 2,
                     ManufacturerId = 2,
                     Color = "Yellow",
-                    Model = "Vovlo",
-                    HorsePower = 1337,
-                    LicensePlate = "asd123",
+                    Model = "A3",
+                    HorsePower = 200,
+                    LicensePlate = "SAD123",
                     Price = 400000
                 },
                 new CarDetails
                 {
-                    Id = 2,
-                    ManufacturerId = 2,
+                    Id = 3,
+                    ManufacturerId = 3,
                     Color = "Yellow",
-                    Model = "Vovlo",
-                    HorsePower = 1337,
-                    LicensePlate = "asd123",
+                    Model = "M5",
+                    HorsePower = 240,
+                    LicensePlate = "BLA773",
                     Price = 400000
                 }
                 );

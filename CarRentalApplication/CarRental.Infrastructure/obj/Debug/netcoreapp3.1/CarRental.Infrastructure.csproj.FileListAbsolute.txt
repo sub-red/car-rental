@@ -16,3 +16,16 @@ C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infras
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csproj.CopyComplete
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.deps.json
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Application.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Application.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.AssemblyInfo.cs
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csproj.CopyComplete
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb

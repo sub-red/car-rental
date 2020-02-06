@@ -43,9 +43,6 @@ namespace CarRental.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CarManufacturerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
 
@@ -55,6 +52,9 @@ namespace CarRental.Infrastructure.Migrations
                     b.Property<string>("LicensePlate")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ManufacturerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Model")
                         .HasColumnType("nvarchar(max)");
 
@@ -63,9 +63,41 @@ namespace CarRental.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarManufacturerId");
+                    b.HasIndex("ManufacturerId");
 
                     b.ToTable("CarDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Color = "Red",
+                            HorsePower = 140,
+                            LicensePlate = "ASD123",
+                            ManufacturerId = 1,
+                            Model = "V90",
+                            Price = 500000
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Color = "Yellow",
+                            HorsePower = 200,
+                            LicensePlate = "SAD123",
+                            ManufacturerId = 2,
+                            Model = "A3",
+                            Price = 400000
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Color = "Yellow",
+                            HorsePower = 240,
+                            LicensePlate = "BLA773",
+                            ManufacturerId = 3,
+                            Model = "M5",
+                            Price = 400000
+                        });
                 });
 
             modelBuilder.Entity("CarRental.Domain.CarManufacturer", b =>
@@ -82,6 +114,23 @@ namespace CarRental.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CarManufacturers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Manufacturer = "Volvo"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Manufacturer = "Audi"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Manufacturer = "BMW"
+                        });
                 });
 
             modelBuilder.Entity("CarRental.Domain.CarCopy", b =>
@@ -95,7 +144,9 @@ namespace CarRental.Infrastructure.Migrations
                 {
                     b.HasOne("CarRental.Domain.CarManufacturer", "CarManufacturer")
                         .WithMany("Cars")
-                        .HasForeignKey("CarManufacturerId");
+                        .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
