@@ -13,9 +13,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CarManufacturer" class="control-label"></label>
-                <input asp-for="CarManufacturer" class="form-control" />
-                <span asp-validation-for="CarManufacturer" class="text-danger"></span>
+                <label asp-for="CarManufacturerList" class="control-label"></label>
+                @Html.DropDownListFor(m => m.ManufacturerId, Model.CarManufacturerList, "Choose car a manufacturer")
+                @*<select asp-for="CarManufacturerList" class="form-control" asp-items="Model.CarManufacturer"></select>*@
             </div>
             <div class="form-group">
                 <label asp-for="Model" class="control-label"></label>
@@ -42,6 +42,7 @@
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+            @Html.ValidationSummary()
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

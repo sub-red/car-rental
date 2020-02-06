@@ -71,7 +71,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            Color = "Red",
+                            Color = "Black",
                             HorsePower = 140,
                             LicensePlate = "ASD123",
                             ManufacturerId = 1,
@@ -81,7 +81,7 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 2,
-                            Color = "Yellow",
+                            Color = "Silver",
                             HorsePower = 200,
                             LicensePlate = "SAD123",
                             ManufacturerId = 2,
@@ -91,12 +91,82 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 3,
-                            Color = "Yellow",
+                            Color = "Black",
                             HorsePower = 240,
                             LicensePlate = "BLA773",
                             ManufacturerId = 3,
                             Model = "M5",
                             Price = 400000
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Color = "Blue",
+                            HorsePower = 100,
+                            LicensePlate = "DSA123",
+                            ManufacturerId = 4,
+                            Model = "Octavia",
+                            Price = 50000
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Color = "Grey",
+                            HorsePower = 110,
+                            LicensePlate = "DSA213",
+                            ManufacturerId = 5,
+                            Model = "Corolla",
+                            Price = 20000
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Color = "Dark Blue",
+                            HorsePower = 170,
+                            LicensePlate = "SAA601",
+                            ManufacturerId = 6,
+                            Model = "9-3",
+                            Price = 5000
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Color = "Green",
+                            HorsePower = 80,
+                            LicensePlate = "GFT154",
+                            ManufacturerId = 7,
+                            Model = "Polo",
+                            Price = 15000
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Color = "White",
+                            HorsePower = 140,
+                            LicensePlate = "JPN001",
+                            ManufacturerId = 8,
+                            Model = "i30",
+                            Price = 75000
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Color = "Beige",
+                            HorsePower = 140,
+                            LicensePlate = "RUS001",
+                            ManufacturerId = 9,
+                            Model = "Granta",
+                            Price = 4000
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Color = "Black",
+                            HorsePower = 661,
+                            LicensePlate = "CSH247",
+                            ManufacturerId = 10,
+                            Model = "Spider 488",
+                            Price = 750000
                         });
                 });
 
@@ -130,6 +200,41 @@ namespace CarRental.Infrastructure.Migrations
                         {
                             Id = 3,
                             Manufacturer = "BMW"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Manufacturer = "Skoda"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Manufacturer = "Toyota"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Manufacturer = "Saab"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Manufacturer = "Volkswagen"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Manufacturer = "Hyundai"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Manufacturer = "Lada"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Manufacturer = "Ferrari"
                         });
                 });
 

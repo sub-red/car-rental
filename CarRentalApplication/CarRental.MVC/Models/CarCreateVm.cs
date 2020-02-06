@@ -10,10 +10,8 @@ namespace CarRental.MVC.Models
 {
     public class CarCreateVm
     {
-        [Required]
         [Display(Name = "Manufacturer")]
-        [MaxLength(20)]
-        public CarManufacturer CarManufacturer { get; set; }
+        public SelectList CarManufacturerList { get; set; }
         
         [Display(Name = "Model")]
         [MaxLength(30)]
@@ -31,6 +29,8 @@ namespace CarRental.MVC.Models
 
         [Display(Name = "Price")]
         public int Price { get; set; }
+
+        [Required]
         public int ManufacturerId { get; set; }
     }
 }

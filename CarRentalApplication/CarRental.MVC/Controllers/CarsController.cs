@@ -7,6 +7,7 @@ using CarRental.Domain;
 using CarRental.MVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CarRental.MVC.Controllers
 {
@@ -39,6 +40,7 @@ namespace CarRental.MVC.Controllers
         public ActionResult Create()
         {
             var vm = new CarCreateVm();
+            vm.CarManufacturerList = new SelectList(carManufacturerService.GetAllCarManufacturers(), "Id", "Manufacturer");
             return View(vm);
         }
 
@@ -47,8 +49,10 @@ namespace CarRental.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CarCreateVm vm)
         {
+            vm.CarManufacturerList = new SelectList(carManufacturerService.GetAllCarManufacturers(), "Id", "Manufacturer"); //Bad practice but necessary for the moment
             // TODO: Add insert logic here
-            if (true)
+            if (!ModelState.IsValid)
+                return View(vm);
             {
                 //Create new car
                 var newCar = new CarDetails();
@@ -61,16 +65,8 @@ namespace CarRental.MVC.Controllers
                 newCar.LicensePlate = vm.LicensePlate;
 
                 carService.AddCar(newCar);
-                
+                return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(Index));
-            /*
-            else
-            {
-                return RedirectToAction("Error", "Home", "");
-            }
-            */
-
         }
 
         // GET: Car/Edit/5
