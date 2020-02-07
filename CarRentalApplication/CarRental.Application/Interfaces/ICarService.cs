@@ -31,5 +31,10 @@ namespace CarRental.Application.Interfaces
         /// <returns>list of cars</returns>
         ICollection<CarDetails> GetAllCars();
 
+        /// <summary>
+        /// Deletes the selected car from db
+        /// </summary>
+        /// <param name="car"></param>
+        void DeleteCar(CarDetails car);
     }
 }

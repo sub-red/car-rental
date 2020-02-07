@@ -72,46 +72,60 @@ namespace CarRental.MVC.Controllers
         // GET: Car/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var vm = new CarEditVm();
+            vm.Id = id;
+            vm.CarManufacturerList = new SelectList(carManufacturerService.GetAllCarManufacturers(), "Id", "Manufacturer");
+            return View(vm);
         }
 
         // POST: Car/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(CarEditVm vm, int id)
         {
-            try
+            vm.CarManufacturerList = new SelectList(carManufacturerService.GetAllCarManufacturers(), "Id", "Manufacturer");
+            if (!ModelState.IsValid)
+                return View(vm);
             {
                 // TODO: Add update logic here
+                var updatedCar = new CarDetails();
+                updatedCar.Id = vm.Id; // Might not need
+                updatedCar.ManufacturerId = vm.ManufacturerId;
+                updatedCar.LicensePlate = vm.LicensePlate;
+                updatedCar.Model = vm.Model;
+                updatedCar.Price = vm.Price;
+                updatedCar.HorsePower = vm.HorsePower;
+                updatedCar.Color = vm.Color;
+
+                carService.UpdateCarDetails(updatedCar);
+
 
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
 
         // GET: Car/Delete/5
         public ActionResult Delete(int id)
         {
+            var vm = new CarDetails();
+            vm.Id = id;
             return View();
         }
 
         // POST: Car/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(CarDeleteVm vm, int id)
         {
-            try
+            if (!ModelState.IsValid)
+                return View(vm);
             {
-                // TODO: Add delete logic here
+                var carToDelete = new CarDetails();
+                carToDelete.Id = vm.Id;
+
+                carService.DeleteCar(carToDelete);
 
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
     }

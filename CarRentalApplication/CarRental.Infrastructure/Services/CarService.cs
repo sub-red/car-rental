@@ -31,12 +31,19 @@ namespace CarRental.Infrastructure.Services
 
         public void UpdateCarDetails(CarDetails car)
         {
-            throw new NotImplementedException();
+            context.Update(car);
+            context.SaveChanges();
         }
 
         public void UpdateCarDetails(int id, CarDetails car)
         {
             throw new NotImplementedException();
+        }
+
+        public void DeleteCar(CarDetails car)
+        {
+            context.Remove(car);
+            context.SaveChanges();
         }
     }
 }
