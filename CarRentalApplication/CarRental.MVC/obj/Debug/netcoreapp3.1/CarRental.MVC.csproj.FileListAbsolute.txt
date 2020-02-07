@@ -420,3 +420,4 @@ C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\ob
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Create.cshtml.g.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Edit.cshtml.g.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Delete.cshtml.g.cs
+C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Details.cshtml.g.cs

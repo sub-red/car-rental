@@ -45,5 +45,11 @@ namespace CarRental.Infrastructure.Services
             context.Remove(car);
             context.SaveChanges();
         }
+
+        public void ShowCarDetails() 
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -36,5 +36,7 @@ namespace CarRental.Application.Interfaces
         /// </summary>
         /// <param name="car"></param>
         void DeleteCar(CarDetails car);
+
+        void ShowCarDetails();
     }
 }
