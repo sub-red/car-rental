@@ -29,3 +29,11 @@ C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infras
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csproj.CopyComplete
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.deps.json
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Application.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\bin\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.csproj.CopyComplete
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Infrastructure\obj\Debug\netcoreapp3.1\CarRental.Infrastructure.pdb

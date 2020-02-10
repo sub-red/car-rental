@@ -14,3 +14,11 @@ C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfo.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.dll
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.deps.json
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\bin\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.csprojAssemblyReference.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfoInputs.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.AssemblyInfo.cs
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Domain\obj\Debug\netcoreapp3.1\CarRental.Domain.pdb

@@ -1,0 +1,61 @@
+﻿@model CarRental.MVC.Models.CarDetailsVm
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>License Plate</th>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Color</th>
+            <th>Price</th>
+            <th>Horse Power</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cars)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicensePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarManufacturer.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HorsePower)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<!--
+<div>
+    <h4>CarDetailsVm</h4>
+    <hr />
+    <dl class="row">
+
+    </dl>
+</div>
+
+-->
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

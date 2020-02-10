@@ -20,3 +20,14 @@ C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Applic
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.csproj.CopyComplete
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.dll
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\bin\Debug\netcoreapp3.1\CarRental.Application.deps.json
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\bin\Debug\netcoreapp3.1\CarRental.Application.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\bin\Debug\netcoreapp3.1\CarRental.Application.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\bin\Debug\netcoreapp3.1\CarRental.Domain.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\bin\Debug\netcoreapp3.1\CarRental.Domain.pdb
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.csprojAssemblyReference.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.AssemblyInfoInputs.cache
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.AssemblyInfo.cs
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.csproj.CopyComplete
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.dll
+C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.Application\obj\Debug\netcoreapp3.1\CarRental.Application.pdb

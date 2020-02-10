@@ -31,9 +31,11 @@ namespace CarRental.MVC.Controllers
         }
 
         // GET: Car/Details/5
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            return View();   
+            var vm = new CarDetailsVm();
+            vm.Cars = carService.ShowCarDetails(id);
+            return View(vm);   
         }
 
         // GET: Car/Create

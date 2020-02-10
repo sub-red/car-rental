@@ -9,5 +9,6 @@ namespace CarRental.MVC.Models
 {
     public class CarDetailsVm
     {
+        public ICollection<CarDetails> Cars { get; set; } = new List<CarDetails>();
     }
 }

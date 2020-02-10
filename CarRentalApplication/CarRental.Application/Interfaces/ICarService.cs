@@ -37,6 +37,6 @@ namespace CarRental.Application.Interfaces
         /// <param name="car"></param>
         void DeleteCar(CarDetails car);
 
-        void ShowCarDetails();
+        ICollection<CarDetails> ShowCarDetails(int id);
     }
 }

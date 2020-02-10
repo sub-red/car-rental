@@ -46,9 +46,9 @@ namespace CarRental.Infrastructure.Services
             context.SaveChanges();
         }
 
-        public void ShowCarDetails() 
+        public ICollection<CarDetails> ShowCarDetails(int id)
         {
-            throw new NotImplementedException();
+            return context.CarDetails.Where(x => x.Id == id).ToList();
         }
 
     }
