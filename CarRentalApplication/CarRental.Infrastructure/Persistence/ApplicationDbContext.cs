@@ -15,11 +15,16 @@ namespace CarRental.Infrastructure.Persistence
 
         public DbSet<CarDetails> CarDetails { get; set; }
         public DbSet<CarManufacturer> CarManufacturers { get; set; }
+        public DbSet<MemberDetails> MemberDetails { get; set; }
+        public DbSet<MemberCard> MemberCard { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             ConfigureCarManufacturer(modelBuilder);
             ConfigureCarDetails(modelBuilder);
+
+            ConfigureMemberCard(modelBuilder);
+            ConfigureMemberDetails(modelBuilder);
 
             SeedDatabase(modelBuilder);
 
@@ -144,6 +149,34 @@ namespace CarRental.Infrastructure.Persistence
                     Price = 750000
                 }
                 );
+
+            modelBuilder.Entity<MemberCard>().HasData(
+                new MemberCard { Id = 1, QrCode = 123 },
+                new MemberCard { Id = 2, QrCode = 124 }
+                );
+
+            modelBuilder.Entity<MemberDetails>().HasData(
+                new MemberDetails
+                {
+                    Id = 1,
+                    MemberCardId = 001,
+                    FirstName = "Sven",
+                    LastName = "Svensson",
+                    Age = 75,
+                    Adress = "Drottninggatan 1",
+                    DriversLicense = 1111
+                },
+                new MemberDetails
+                {
+                    Id = 2,
+                    MemberCardId = 002,
+                    FirstName = "Karl",
+                    LastName = "Karlsson",
+                    Age = 65,
+                    Adress = "Kungsgatan 1",
+                    DriversLicense = 1112
+                }
+                );
         }
 
         private static void ConfigureCarManufacturer(ModelBuilder modelBuilder)
@@ -158,6 +191,20 @@ namespace CarRental.Infrastructure.Persistence
                 .HasOne(b => b.CarManufacturer)
                 .WithMany(a => a.Cars)
                 .HasForeignKey(b => b.ManufacturerId);
+        }
+
+        private static void ConfigureMemberCard(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MemberCard>().Property(x => x.QrCode).HasMaxLength(55);
+        }
+
+        private static void ConfigureMemberDetails(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MemberDetails>().HasKey(x => x.Id);
+            modelBuilder.Entity<MemberDetails>()
+                .HasOne(b => b.MemberCard)
+                .WithMany(a => a.Members)
+                .HasForeignKey(b => b.MemberCardId);
         }
     }
 }

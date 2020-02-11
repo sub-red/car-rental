@@ -238,6 +238,88 @@ namespace CarRental.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CarRental.Domain.MemberCard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("QrCode")
+                        .HasColumnType("int")
+                        .HasMaxLength(55);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MemberCard");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            QrCode = 123
+                        },
+                        new
+                        {
+                            Id = 2,
+                            QrCode = 124
+                        });
+                });
+
+            modelBuilder.Entity("CarRental.Domain.MemberDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DriversLicense")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MemberCardId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MemberCardId");
+
+                    b.ToTable("MemberDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Adress = "Drottninggatan 1",
+                            Age = 75,
+                            DriversLicense = 1111,
+                            FirstName = "Sven",
+                            LastName = "Svensson",
+                            MemberCardId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Adress = "Kungsgatan 1",
+                            Age = 65,
+                            DriversLicense = 1112,
+                            FirstName = "Karl",
+                            LastName = "Karlsson",
+                            MemberCardId = 2
+                        });
+                });
+
             modelBuilder.Entity("CarRental.Domain.CarCopy", b =>
                 {
                     b.HasOne("CarRental.Domain.CarDetails", "Details")
@@ -250,6 +332,15 @@ namespace CarRental.Infrastructure.Migrations
                     b.HasOne("CarRental.Domain.CarManufacturer", "CarManufacturer")
                         .WithMany("Cars")
                         .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CarRental.Domain.MemberDetails", b =>
+                {
+                    b.HasOne("CarRental.Domain.MemberCard", "MemberCard")
+                        .WithMany("Members")
+                        .HasForeignKey("MemberCardId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -29,6 +29,8 @@ namespace CarRental.MVC
             services.AddControllersWithViews();
             services.AddScoped<ICarService, CarService>();
             services.AddScoped<ICarManufacturerService, CarManufacturerService>();
+            services.AddScoped<IMemberService, MemberService>();
+            services.AddScoped<IMemberCardService, MemberCardService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CarRental"),
