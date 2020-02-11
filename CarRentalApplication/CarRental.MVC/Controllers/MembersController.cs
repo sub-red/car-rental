@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CarRental.Application.Interfaces;
+using CarRental.Domain;
 using CarRental.MVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,23 +38,31 @@ namespace CarRental.MVC.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
-            return View();
+            var vm = new MemberCreateVm();           
+            return View(vm);
+
         }
 
         // POST: Members/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(MemberCreateVm vm)
         {
-            try
+            if (!ModelState.IsValid)
+                return View(vm);
             {
-                // TODO: Add insert logic here
+                //Create new car
+                var newMember = new MemberDetails();
+                newMember.FirstName = vm.FirstName;
+                newMember.LastName = vm.LastName;
+                newMember.Adress = vm.Adress;
+                newMember.Age = vm.Age;
+                newMember.DriversLicense = vm.DriversLicense;
+                newMember.MemberCardId = vm.MemberCardId;
+                
 
+                memberService.AddMember(newMember);
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
 

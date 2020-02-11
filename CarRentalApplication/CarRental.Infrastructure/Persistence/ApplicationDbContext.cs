@@ -152,14 +152,16 @@ namespace CarRental.Infrastructure.Persistence
 
             modelBuilder.Entity<MemberCard>().HasData(
                 new MemberCard { Id = 1, QrCode = 123 },
-                new MemberCard { Id = 2, QrCode = 124 }
+                new MemberCard { Id = 2, QrCode = 124 },
+                new MemberCard { Id = 3, QrCode = 125}
+
                 );
 
             modelBuilder.Entity<MemberDetails>().HasData(
                 new MemberDetails
                 {
                     Id = 1,
-                    MemberCardId = 001,
+                    MemberCardId = 1,
                     FirstName = "Sven",
                     LastName = "Svensson",
                     Age = 75,
@@ -169,7 +171,7 @@ namespace CarRental.Infrastructure.Persistence
                 new MemberDetails
                 {
                     Id = 2,
-                    MemberCardId = 002,
+                    MemberCardId = 2,
                     FirstName = "Karl",
                     LastName = "Karlsson",
                     Age = 65,
