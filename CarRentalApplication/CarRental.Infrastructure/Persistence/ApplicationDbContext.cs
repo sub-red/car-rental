@@ -151,9 +151,10 @@ namespace CarRental.Infrastructure.Persistence
                 );
 
             modelBuilder.Entity<MemberCard>().HasData(
-                new MemberCard { Id = 1, QrCode = 123 },
-                new MemberCard { Id = 2, QrCode = 124 },
-                new MemberCard { Id = 3, QrCode = 125}
+                new MemberCard { Id = 1, MemberStatus = "Active" },
+                new MemberCard { Id = 2, MemberStatus = "Inactive" },
+                new MemberCard { Id = 3, MemberStatus = "Suspended, pending investigation" },
+                new MemberCard { Id = 4, MemberStatus = "Permanently banned" }
 
                 );
 
@@ -177,6 +178,26 @@ namespace CarRental.Infrastructure.Persistence
                     Age = 65,
                     Adress = "Kungsgatan 1",
                     DriversLicense = 1112
+                },
+                new MemberDetails
+                {
+                    Id = 3,
+                    MemberCardId = 3,
+                    FirstName = "Johan",
+                    LastName = "Johansson",
+                    Age = 55,
+                    Adress = "Prinsgatan 1",
+                    DriversLicense = 2211
+                },
+                new MemberDetails
+                {
+                    Id = 4,
+                    MemberCardId = 4,
+                    FirstName = "Anders",
+                    LastName = "Andersson",
+                    Age = 12,
+                    Adress = "Prinsessgatan 1",
+                    DriversLicense = 2212
                 }
                 );
         }
@@ -197,7 +218,7 @@ namespace CarRental.Infrastructure.Persistence
 
         private static void ConfigureMemberCard(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MemberCard>().Property(x => x.QrCode).HasMaxLength(55);
+            modelBuilder.Entity<MemberCard>().Property(x => x.MemberStatus).HasMaxLength(55);
         }
 
         private static void ConfigureMemberDetails(ModelBuilder modelBuilder)

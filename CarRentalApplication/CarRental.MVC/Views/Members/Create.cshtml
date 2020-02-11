@@ -37,11 +37,7 @@
                 <input asp-for="DriversLicense" class="form-control" />
                 <span asp-validation-for="DriversLicense" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MemberCardId" class="control-label"></label>
-                <input asp-for="MemberCardId" class="form-control" />
-                <span asp-validation-for="MemberCardId" class="text-danger"></span>
-            </div>
+            @Html.ValidationSummary()
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

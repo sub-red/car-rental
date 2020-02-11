@@ -10,6 +10,7 @@ namespace CarRental.MVC.Models
 {
     public class CarCreateVm
     {
+
         [Display(Name = "Manufacturer")]
         public SelectList CarManufacturerList { get; set; }
         

@@ -245,8 +245,8 @@ namespace CarRental.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("QrCode")
-                        .HasColumnType("int")
+                    b.Property<string>("MemberStatus")
+                        .HasColumnType("nvarchar(55)")
                         .HasMaxLength(55);
 
                     b.HasKey("Id");
@@ -257,17 +257,22 @@ namespace CarRental.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            QrCode = 123
+                            MemberStatus = "Active"
                         },
                         new
                         {
                             Id = 2,
-                            QrCode = 124
+                            MemberStatus = "Inactive"
                         },
                         new
                         {
                             Id = 3,
-                            QrCode = 125
+                            MemberStatus = "Suspended, pending investigation"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            MemberStatus = "Permanently banned"
                         });
                 });
 
@@ -322,6 +327,26 @@ namespace CarRental.Infrastructure.Migrations
                             FirstName = "Karl",
                             LastName = "Karlsson",
                             MemberCardId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Adress = "Prinsgatan 1",
+                            Age = 55,
+                            DriversLicense = 2211,
+                            FirstName = "Johan",
+                            LastName = "Johansson",
+                            MemberCardId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Adress = "Prinsessgatan 1",
+                            Age = 12,
+                            DriversLicense = 2212,
+                            FirstName = "Anders",
+                            LastName = "Andersson",
+                            MemberCardId = 4
                         });
                 });
 

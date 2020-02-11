@@ -7,8 +7,18 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200206113229_initial-create-two.cs" />
     <Compile Remove="Migrations\20200206113229_initial-create-two.Designer.cs" />
+    <Compile Remove="Migrations\20200206131547_initial-three.cs" />
+    <Compile Remove="Migrations\20200206131547_initial-three.Designer.cs" />
+    <Compile Remove="Migrations\20200206162802_initial-four.cs" />
+    <Compile Remove="Migrations\20200206162802_initial-four.Designer.cs" />
     <Compile Remove="Migrations\20200211102241_initial-five.cs" />
     <Compile Remove="Migrations\20200211102241_initial-five.Designer.cs" />
+    <Compile Remove="Migrations\20200211105449_initial-five.cs" />
+    <Compile Remove="Migrations\20200211105449_initial-five.Designer.cs" />
+    <Compile Remove="Migrations\20200211130329_initial-six.cs" />
+    <Compile Remove="Migrations\20200211130329_initial-six.Designer.cs" />
+    <Compile Remove="Migrations\20200211132521_initial-seven.cs" />
+    <Compile Remove="Migrations\20200211132521_initial-seven.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

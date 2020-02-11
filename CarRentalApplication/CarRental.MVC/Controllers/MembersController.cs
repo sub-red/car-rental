@@ -7,6 +7,7 @@ using CarRental.Domain;
 using CarRental.MVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CarRental.MVC.Controllers
 {
@@ -38,7 +39,8 @@ namespace CarRental.MVC.Controllers
         // GET: Members/Create
         public ActionResult Create()
         {
-            var vm = new MemberCreateVm();           
+            var vm = new MemberCreateVm();
+            //vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Member-Status");
             return View(vm);
 
         }
@@ -48,6 +50,7 @@ namespace CarRental.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(MemberCreateVm vm)
         {
+            //vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Member-Status");
             if (!ModelState.IsValid)
                 return View(vm);
             {

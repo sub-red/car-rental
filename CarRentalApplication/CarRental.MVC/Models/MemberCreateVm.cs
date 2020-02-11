@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,6 +9,14 @@ namespace CarRental.MVC.Models
 {
     public class MemberCreateVm
     {
+        public MemberCreateVm()
+        {
+            MemberCardId = 1;
+        }
+        /*
+        [Display(Name = "Member-Status")]
+        public SelectList MemberStatusList { get; set; }    
+        */
         [Display(Name = "First name")]
         [MaxLength(30)]
         public string FirstName { get; set; }

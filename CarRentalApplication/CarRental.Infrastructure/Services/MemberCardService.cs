@@ -19,7 +19,7 @@ namespace CarRental.Infrastructure.Services
 
         public IList<MemberCard> GetAllMemberCards()
         {
-            return context.MemberCard.OrderBy(x => x.QrCode).ToList();
+            return context.MemberCard.OrderBy(x => x.MemberStatus).ToList();
         }
     }
 }
