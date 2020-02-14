@@ -1339,3 +1339,4 @@ C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj
 C:\Users\ELGI\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Edit.cshtml.g.cs
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Delete.cshtml.g.cs
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Edit.cshtml.g.cs
+C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Details.cshtml.g.cs

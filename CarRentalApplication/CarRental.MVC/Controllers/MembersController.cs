@@ -33,7 +33,9 @@ namespace CarRental.MVC.Controllers
         // GET: Members/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var vm = new MemberDetailsVm();
+            vm.Members = memberService.ShowMemberDetails(id);
+            return View(vm);
         }
 
         // GET: Members/Create

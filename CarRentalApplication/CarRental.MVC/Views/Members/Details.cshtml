@@ -1,0 +1,49 @@
+﻿@model CarRental.MVC.Models.MemberDetailsVm
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+            <th>Adress</th>
+            <th>Drivers license</th>
+            <th>MemberCardId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Members)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DriversLicense)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MemberCardId)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
