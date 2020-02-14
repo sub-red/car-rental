@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,6 +9,11 @@ namespace CarRental.MVC.Models
 {
     public class MemberEditVm
     {
+
+        [Required]
+        [Display(Name = "Member status")]
+        public SelectList MemberStatusList { get; set; }
+
         [Display(Name = "First name")]
         [MaxLength(30)]
         public string FirstName { get; set; }
@@ -25,7 +31,8 @@ namespace CarRental.MVC.Models
         [Display(Name = "Drivers license 4d")]
         public int DriversLicense { get; set; }
 
-        [Required]
         public int MemberCardId { get; set; }
+
+        public int Id { get; set; }
     }
 }

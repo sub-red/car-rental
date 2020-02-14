@@ -72,46 +72,60 @@ namespace CarRental.MVC.Controllers
         // GET: Members/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var vm = new MemberEditVm();
+            vm.Id = id;
+            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Status");
+            return View(vm);
         }
 
         // POST: Members/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(MemberEditVm vm, int id)
         {
-            try
+            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Status");
+            if (!ModelState.IsValid)
+                return View(vm);
             {
                 // TODO: Add update logic here
+                var updatedMember = new MemberDetails();
+                updatedMember.Id = vm.Id; // Might not need
+                updatedMember.FirstName = vm.FirstName;
+                updatedMember.LastName = vm.LastName;
+                updatedMember.Age = vm.Age;
+                updatedMember.Adress = vm.Adress;
+                updatedMember.DriversLicense = vm.DriversLicense;
+                updatedMember.MemberCardId = vm.MemberCardId;
+
+                memberService.UpdateMemberDetails(updatedMember);
+
 
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
 
         // GET: Members/Delete/5
         public ActionResult Delete(int id)
         {
+            var vm = new MemberDetails();
+            vm.Id = id;
             return View();
         }
 
         // POST: Members/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(MemberDeleteVm vm, int id)
         {
-            try
+            if (!ModelState.IsValid)
+                return View(vm);
             {
-                // TODO: Add delete logic here
+                var memberToDelete = new MemberDetails();
+                memberToDelete.Id = vm.Id;
+
+                memberService.DeleteMember(memberToDelete);
 
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
             }
         }
     }
