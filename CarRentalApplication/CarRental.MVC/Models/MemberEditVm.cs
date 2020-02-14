@@ -10,7 +10,7 @@ namespace CarRental.MVC.Models
     public class MemberEditVm
     {
 
-        [Required]
+        
         [Display(Name = "Member status")]
         public SelectList MemberStatusList { get; set; }
 
@@ -30,7 +30,7 @@ namespace CarRental.MVC.Models
 
         [Display(Name = "Drivers license 4d")]
         public int DriversLicense { get; set; }
-
+        [Required]
         public int MemberCardId { get; set; }
 
         public int Id { get; set; }

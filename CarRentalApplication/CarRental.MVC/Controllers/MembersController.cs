@@ -74,7 +74,7 @@ namespace CarRental.MVC.Controllers
         {
             var vm = new MemberEditVm();
             vm.Id = id;
-            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Status");
+            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "MemberStatus");
             return View(vm);
         }
 
@@ -83,19 +83,20 @@ namespace CarRental.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(MemberEditVm vm, int id)
         {
-            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "Status");
+            vm.MemberStatusList = new SelectList(memberCardService.GetAllMemberCards(), "Id", "MemberStatus");
             if (!ModelState.IsValid)
                 return View(vm);
             {
                 // TODO: Add update logic here
                 var updatedMember = new MemberDetails();
                 updatedMember.Id = vm.Id; // Might not need
+                updatedMember.MemberCardId = vm.MemberCardId;
                 updatedMember.FirstName = vm.FirstName;
                 updatedMember.LastName = vm.LastName;
                 updatedMember.Age = vm.Age;
                 updatedMember.Adress = vm.Adress;
                 updatedMember.DriversLicense = vm.DriversLicense;
-                updatedMember.MemberCardId = vm.MemberCardId;
+                
 
                 memberService.UpdateMemberDetails(updatedMember);
 
