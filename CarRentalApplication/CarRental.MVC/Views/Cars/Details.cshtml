@@ -4,47 +4,65 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>License Plate</th>
-            <th>Model</th>
-            <th>Manufacturer</th>
-            <th>Color</th>
-            <th>Price</th>
-            <th>Horse Power</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Cars)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LicensePlate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CarManufacturer.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HorsePower)
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+<h1 class="h3 mt-5">Car Details</h1>
+
+<table class="table table-detail">
+    <tbody>
+        @foreach (var item in Model.Cars)
+        {
+            <tr>
+                <td class="font-weight-bold">
+                    License Plate:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicensePlate)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Model:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Manufacturer:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarManufacturer.Manufacturer)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Color:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Price:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Horse Power:
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HorsePower)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

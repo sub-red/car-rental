@@ -4,37 +4,59 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Age</th>
-            <th>Adress</th>
-            <th>Drivers license</th>
-            <th>MemberCardId</th>
-        </tr>
-    </thead>
+<h1 class="h3 mt-5">Member Details</h1>
+
+<table class="table table-detail">
     <tbody>
         @foreach (var item in Model.Members)
         {
             <tr>
+                <td class="font-weight-bold">
+                    Firstname:
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Lastname:
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.LastName)
                 </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Age:
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Address:
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Adress)
                 </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Driver License:
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DriversLicense)
+                </td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold">
+                    Member ID:
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.MemberCardId)
@@ -44,6 +66,3 @@
     </tbody>
 </table>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
