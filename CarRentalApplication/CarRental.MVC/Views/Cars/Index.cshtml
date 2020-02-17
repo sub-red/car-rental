@@ -7,8 +7,11 @@
 <h1 class="h2">Car List</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-secondary btn-block mt-5">Create new car</a>
+    <a asp-action="Create" class="btn btn-secondary btn-block mt-5">Create new car +</a>
 </p>
+
+<input class="form-control searchInput" type="text" placeholder="Search..">
+
 <table class="table">
     <thead>
         <tr>
@@ -20,31 +23,31 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="searchTable">
         @foreach (var item in Model.Cars)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LicensePlate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CarManufacturer.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LicensePlate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CarManufacturer.Manufacturer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark px-1"><i class="fas fa-pen"></i></a> 
+                    <a asp-action="Details" asp-route-id="@item.Id" class="text-info px-1"><i class="fas fa-file-alt"></i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="text-danger px-1"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
