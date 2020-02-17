@@ -17,6 +17,8 @@ namespace CarRental.Infrastructure.Persistence
         public DbSet<CarManufacturer> CarManufacturers { get; set; }
         public DbSet<MemberDetails> MemberDetails { get; set; }
         public DbSet<MemberCard> MemberCard { get; set; }
+        public DbSet<RentalLoan> RentalLoans { get; set; }
+        public DbSet<Rentals> Rentals { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -200,6 +202,19 @@ namespace CarRental.Infrastructure.Persistence
                     DriversLicense = 2212
                 }
                 );
+
+
+            modelBuilder.Entity<RentalLoan>().HasData(
+                new RentalLoan { Id = 1, RentalStatus = "Available" },
+                new RentalLoan { Id = 2, RentalStatus = "Unavailable" }
+
+                );
+            /*
+            modelBuilder.Entity<Rentals>().HasData(
+                new Rentals { Id = 1, Rented = DateTime.Now}
+
+                );
+                */
         }
 
         private static void ConfigureCarManufacturer(ModelBuilder modelBuilder)
