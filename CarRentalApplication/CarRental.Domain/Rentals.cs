@@ -11,7 +11,7 @@ namespace CarRental.Domain
         public DateTime Returned { get; set; }
         public CarDetails CarReference { get; set; }
         public MemberDetails MemberReference { get; set; }
-
         public RentalLoan RentalLoan { get; set; }
+        public int RentalLoanId { get; set; }
     }
 }

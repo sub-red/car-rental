@@ -65,6 +65,7 @@ namespace CarRental.MVC.Controllers
                 newCar.Color = vm.Color;
                 newCar.HorsePower = vm.HorsePower;
                 newCar.LicensePlate = vm.LicensePlate;
+                newCar.LoanStatusId = vm.LoanStatusId;
 
                 carService.AddCar(newCar);
                 return RedirectToAction(nameof(Index));
@@ -98,6 +99,7 @@ namespace CarRental.MVC.Controllers
                 updatedCar.Price = vm.Price;
                 updatedCar.HorsePower = vm.HorsePower;
                 updatedCar.Color = vm.Color;
+                updatedCar.LoanStatusId = vm.LoanStatusId;
 
                 carService.UpdateCarDetails(updatedCar);
 

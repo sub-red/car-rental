@@ -10,7 +10,10 @@ namespace CarRental.MVC.Models
 {
     public class CarCreateVm
     {
-
+        public CarCreateVm()
+        {
+            LoanStatusId = 1;
+        }
         [Display(Name = "Manufacturer")]
         public SelectList CarManufacturerList { get; set; }
         
@@ -33,5 +36,7 @@ namespace CarRental.MVC.Models
 
         [Required]
         public int ManufacturerId { get; set; }
+        [Required]
+        public int LoanStatusId { get; set; }
     }
 }

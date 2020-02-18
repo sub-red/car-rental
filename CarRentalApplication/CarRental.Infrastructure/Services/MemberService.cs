@@ -26,7 +26,9 @@ namespace CarRental.Infrastructure.Services
 
         public ICollection<MemberDetails> GetAllMembers()
         {
-            return context.MemberDetails.Include(x => x.MemberCard).OrderBy(x => x.MemberCard.MemberStatus).ToList();
+            return context.MemberDetails
+                .Include(x => x.MemberCard)
+                .OrderBy(x => x.MemberCard.MemberStatus).ToList();
         }
 
         public void UpdateMemberDetails(MemberDetails member)

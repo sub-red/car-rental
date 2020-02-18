@@ -15,5 +15,9 @@ namespace CarRental.Domain
         public string Color { get; set; }
         public CarManufacturer CarManufacturer { get; set; }
         public ICollection<CarCopy> Copies { get; set; }
+        public int LoanStatusId { get; set; }
+        public RentalStatus RentalStatus { get; set; }
+
+
     }
 }

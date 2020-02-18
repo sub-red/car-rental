@@ -26,7 +26,10 @@ namespace CarRental.Infrastructure.Services
 
         public ICollection<CarDetails> GetAllCars() 
         {
-            return context.CarDetails.Include(x => x.CarManufacturer).OrderBy(x => x.CarManufacturer.Manufacturer).ToList();
+            return context.CarDetails
+                .Include(x => x.CarManufacturer)
+                .Include(x => x.RentalStatus)
+                .OrderBy(x => x.CarManufacturer.Manufacturer).ToList();
         }
 
         public void UpdateCarDetails(CarDetails car)
