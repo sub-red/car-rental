@@ -218,7 +218,16 @@ namespace CarRental.Infrastructure.Persistence
                     DriversLicense = 2212
                 }
                 );
-
+            modelBuilder.Entity<Rentals>().HasData(
+                    new Rentals
+                    {
+                        Id = 1,
+                        RentalLoanId = 1,
+                        Rented = DateTime.Now,
+                        Returned = DateTime.Now,
+                        
+                    }
+                    );
 
             modelBuilder.Entity<RentalStatus>().HasData(
                 new RentalStatus { Id = 1, RentalLoanStatus = "Available" },

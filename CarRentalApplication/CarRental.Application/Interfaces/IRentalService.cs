@@ -11,12 +11,14 @@ namespace CarRental.Application.Interfaces
         /// Gets all rentals from the database
         /// </summary>
         /// <returns>list of rentals</returns>
-        ICollection<Rentals> GetAllRentals();
+        //ICollection<Rentals> GetAllRentals();
         /// <summary>
         /// Adds the car to DB
         /// </summary>
         /// <param name="rental"></param>
         void AddRental(Rentals rental);
+
+        ICollection<Rentals> GetAllAvailableCars();
 
         ICollection<Rentals> ShowRentalDetails(int id);
     }

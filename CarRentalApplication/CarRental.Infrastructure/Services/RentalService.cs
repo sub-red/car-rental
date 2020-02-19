@@ -23,13 +23,24 @@ namespace CarRental.Infrastructure.Services
             context.Add(rental);
             context.SaveChanges();
         }
-
-        public ICollection<Rentals> GetAllRentals()
+        /*
+        public ICollection<Rentals> GetAllAvailableCars()
         {
-            return context.Rentals.Include(x => x.RentalLoan).OrderBy(x => x.RentalLoan.RentalStatus).ToList();
+            return context.Rentals.Include(x => x.CarReference).ThenInclude(x => x.LicensePlate)
+                    .Include(x => x.CarReference).ThenInclude(x => x.Model).ToList();
+        }
+        */
+        public ICollection<Rentals> GetAllAvailableCars()
+        {
+            return context.Rentals.Include(x => x.CarReference).ThenInclude(x => x.CarManufacturer).ToList();
         }
 
-
+        /*
+        public ICollection<Rentals> GetAllRentals()
+        {
+            return context.Rentals.Include(x => x.RentalLoan).ToList();
+        }
+        */
         public ICollection<Rentals> ShowRentalDetails(int id)
         {
             return context.Rentals.Where(x => x.Id == id).ToList();

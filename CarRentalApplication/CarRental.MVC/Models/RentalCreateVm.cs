@@ -9,6 +9,11 @@ namespace CarRental.MVC.Models
 {
     public class RentalCreateVm
     {
+        public RentalCreateVm()
+        {
+            Rented = DateTime.Now;
+            Returned = DateTime.Now;
+        }
 
         [Display(Name = "Rented")]
         public DateTime Rented { get; set; }
@@ -16,8 +21,11 @@ namespace CarRental.MVC.Models
         [Display(Name = "Returned")]
         public DateTime Returned { get; set; }
 
-        public SelectList CarManufacturerList { get; set; }
+        [Display(Name = "RentalCar")]
+        public SelectList RentalAvailableList { get; set; }
         public SelectList MembersList { get; set; }
+        public int ManufacturerId { get; set; }
+        public int RentalLoanId { get; set; }
 
     }
 }

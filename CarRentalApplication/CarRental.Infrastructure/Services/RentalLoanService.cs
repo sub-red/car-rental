@@ -1,5 +1,7 @@
-﻿using CarRental.Domain;
+﻿using CarRental.Application.Interfaces;
+using CarRental.Domain;
 using CarRental.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Text;
 
 namespace CarRental.Infrastructure.Services
 {
-    public class RentalLoanService
+    public class RentalLoanService : IRentalLoanService
     {
         private readonly ApplicationDbContext context;
 
@@ -20,5 +22,7 @@ namespace CarRental.Infrastructure.Services
         {
             return context.RentalLoans.OrderBy(x => x.RentalStatus).ToList();
         }
+
+
     }
 }
