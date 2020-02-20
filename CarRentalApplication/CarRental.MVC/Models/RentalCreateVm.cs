@@ -23,9 +23,15 @@ namespace CarRental.MVC.Models
 
         [Display(Name = "RentalCar")]
         public SelectList CarList { get; set; }
+
+        [Display(Name = "RentalMember")]
         public SelectList MembersList { get; set; }
         [Required]
         public int ManufacturerId { get; set; }
+
+        [Required]
+        public int MemberCardId { get; set; }
+        
         public int RentalLoanId { get; set; }
 
     }

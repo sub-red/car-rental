@@ -18,6 +18,11 @@
                 @*<select asp-for="CarList" class="form-control" asp-items="Model.CarList"></select>*@
             </div>
             <div class="form-group">
+                <label asp-for="MembersList" class="control-label"></label>
+                @Html.DropDownListFor(m => m.MemberCardId, Model.MembersList, "Choose a member")
+                @*<select asp-for="MembersList" class="form-control" asp-items="Model.MembersList"></select>*@
+            </div>
+            <div class="form-group">
                 <label asp-for="Rented" class="control-label"></label>
                 <input asp-for="Rented" class="form-control" />
                 <span asp-validation-for="Rented" class="text-danger"></span>

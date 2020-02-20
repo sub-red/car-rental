@@ -13,6 +13,7 @@ namespace CarRental.Domain
         public string Adress { get; set; }
         public int DriversLicense { get; set; }
         public int MemberCardId { get; set; }
+        public string FullName => $"{FirstName} {LastName}";
         public MemberCard MemberCard { get; set; }
     }
 }

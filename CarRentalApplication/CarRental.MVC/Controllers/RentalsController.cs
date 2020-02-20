@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CarRental.Application.Interfaces;
+using CarRental.Domain;
 using CarRental.Infrastructure.Services;
 using CarRental.MVC.Models;
 using Microsoft.AspNetCore.Http;
@@ -16,12 +17,14 @@ namespace CarRental.MVC.Controllers
         private readonly IRentalService rentalService;
         private readonly IRentalLoanService rentalLoanService;
         private readonly ICarService carService;
+        private readonly IMemberService memberService;
 
-        public RentalsController(IRentalService rentalService, IRentalLoanService rentalLoanService, ICarService carService)
+        public RentalsController(IRentalService rentalService, IRentalLoanService rentalLoanService, ICarService carService, IMemberService memberService)
         {
             this.rentalService = rentalService;
             this.rentalLoanService = rentalLoanService;
             this.carService = carService;
+            this.memberService = memberService;
         }
         // GET: Rentals
         public ActionResult Index()
@@ -42,25 +45,34 @@ namespace CarRental.MVC.Controllers
         {
             var vm = new RentalCreateVm();
             vm.CarList = new SelectList(carService.GetAllCars(), "Id", "LicensePlate", "Id", "Model");
+            vm.MembersList = new SelectList(memberService.GetAllMembers(), "Id", "DriversLicense", "Id", "FullName");
             return View(vm);
         }
 
         // POST: Rentals/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(RentalCreateVm vm)
         {
-            try
+            vm.CarList = new SelectList(carService.GetAllCars(), "Id", "LicensePlate", "Id", "Model");
+            vm.MembersList = new SelectList(memberService.GetAllMembers(), "Id", "DriversLicense", "Id", "FullName");
+            // TODO: Add insert logic here
+            if (!ModelState.IsValid)
+                return View(vm);
             {
-                // TODO: Add insert logic here
+                var newRental = new Rentals();
+                newRental.Rented = vm.Rented;
+                newRental.Returned = vm.Returned;
+                newRental.CarReference.ManufacturerId = vm.ManufacturerId;
+                newRental.MemberReference.MemberCardId = vm.MemberCardId;
+                newRental.RentalLoanId = vm.RentalLoanId;
 
+
+                rentalService.AddRental(newRental);
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
         }
+    
 
         // GET: Rentals/Edit/5
         public ActionResult Edit(int id)

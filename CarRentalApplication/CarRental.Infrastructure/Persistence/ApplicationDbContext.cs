@@ -33,7 +33,6 @@ namespace CarRental.Infrastructure.Persistence
             ConfigureRentalLoan(modelBuilder);
             ConfigureRentals(modelBuilder);
             */
-
             SeedDatabase(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
@@ -278,7 +277,6 @@ namespace CarRental.Infrastructure.Persistence
                 .WithMany(a => a.Cars)
                 .HasForeignKey(b => b.LoanStatusId);
         }
-
         /*
         private static void ConfigureRentalLoan(ModelBuilder modelBuilder)
         {
@@ -288,10 +286,10 @@ namespace CarRental.Infrastructure.Persistence
         private static void ConfigureRentals(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Rentals>().HasKey(x => x.Id);
-            modelBuilder.Entity<CarDetails>()
-                .HasOne(b => b.CarManufacturer)
-                .WithMany(a => a.Cars)
-                .HasForeignKey(b => b.RentalLoanId);
+            modelBuilder.Entity<Rentals>()
+                .HasOne(b => b.RentalLoan)
+                .WithMany(a => a.Rentals)
+                .HasForeignKey(b => b.CarReferenceId);
         }
         */
     }

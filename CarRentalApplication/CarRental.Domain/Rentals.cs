@@ -13,5 +13,7 @@ namespace CarRental.Domain
         public MemberDetails MemberReference { get; set; }
         public RentalLoan RentalLoan { get; set; }
         public int RentalLoanId { get; set; }
+        //public int CarReferenceId { get; set; }
+        public int MemberReferenceId { get; set; }
     }
 }
