@@ -22,8 +22,9 @@ namespace CarRental.MVC.Models
         public DateTime Returned { get; set; }
 
         [Display(Name = "RentalCar")]
-        public SelectList RentalAvailableList { get; set; }
+        public SelectList CarList { get; set; }
         public SelectList MembersList { get; set; }
+        [Required]
         public int ManufacturerId { get; set; }
         public int RentalLoanId { get; set; }
 

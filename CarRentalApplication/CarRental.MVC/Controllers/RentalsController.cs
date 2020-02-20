@@ -15,11 +15,13 @@ namespace CarRental.MVC.Controllers
     {
         private readonly IRentalService rentalService;
         private readonly IRentalLoanService rentalLoanService;
+        private readonly ICarService carService;
 
-        public RentalsController(IRentalService rentalService, IRentalLoanService rentalLoanService)
+        public RentalsController(IRentalService rentalService, IRentalLoanService rentalLoanService, ICarService carService)
         {
             this.rentalService = rentalService;
             this.rentalLoanService = rentalLoanService;
+            this.carService = carService;
         }
         // GET: Rentals
         public ActionResult Index()
@@ -39,7 +41,7 @@ namespace CarRental.MVC.Controllers
         public ActionResult Create()
         {
             var vm = new RentalCreateVm();
-            vm.RentalAvailableList = new SelectList(rentalService.GetAllAvailableCars(), "Id", "Manufacturer");
+            vm.CarList = new SelectList(carService.GetAllCars(), "Id", "LicensePlate", "Id", "Model");
             return View(vm);
         }
 

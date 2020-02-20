@@ -13,9 +13,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="RentalAvailableList" class="control-label"></label>
-                @Html.DropDownListFor(m => m.ManufacturerId, Model.RentalAvailableList, "Choose a rental car")
-                @*<select asp-for="CarManufacturerList" class="form-control" asp-items="Model.CarManufacturer"></select>*@
+                <label asp-for="CarList" class="control-label"></label>
+                @Html.DropDownListFor(m => m.ManufacturerId, Model.CarList, "Choose a rental car")
+                @*<select asp-for="CarList" class="form-control" asp-items="Model.CarList"></select>*@
             </div>
             <div class="form-group">
                 <label asp-for="Rented" class="control-label"></label>

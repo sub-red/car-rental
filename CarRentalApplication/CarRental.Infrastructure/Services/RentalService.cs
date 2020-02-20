@@ -32,7 +32,7 @@ namespace CarRental.Infrastructure.Services
         */
         public ICollection<Rentals> GetAllAvailableCars()
         {
-            return context.Rentals.Include(x => x.CarReference).ThenInclude(x => x.CarManufacturer).ToList();
+            return context.Rentals.Include(x => x.CarReference).ToList();
         }
 
         /*

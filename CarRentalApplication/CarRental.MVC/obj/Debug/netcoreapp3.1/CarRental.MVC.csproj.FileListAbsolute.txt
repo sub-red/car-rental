@@ -1349,7 +1349,6 @@ C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\ob
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Details.cshtml.g.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Members\Edit.cshtml.g.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Rentals\Create.cshtml.g.cs
-C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Rentals\Details.cshtml.g.cs
 C:\Users\Calle\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Rentals\Index.cshtml.g.cs
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Rentals\Index.cshtml.g.cs
 C:\Users\vj_94\Documents\GitHub\car-rental\CarRentalApplication\CarRental.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Rentals\Create.cshtml.g.cs
