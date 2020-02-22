@@ -5,47 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200203132847_initial.cs" />
-    <Compile Remove="Migrations\20200203132847_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200206113229_initial-create-two.cs" />
-    <Compile Remove="Migrations\20200206113229_initial-create-two.Designer.cs" />
-    <Compile Remove="Migrations\20200206115815_initial-two.cs" />
-    <Compile Remove="Migrations\20200206115815_initial-two.Designer.cs" />
-    <Compile Remove="Migrations\20200206131547_initial-three.cs" />
-    <Compile Remove="Migrations\20200206131547_initial-three.Designer.cs" />
-    <Compile Remove="Migrations\20200206162802_initial-four.cs" />
-    <Compile Remove="Migrations\20200206162802_initial-four.Designer.cs" />
-    <Compile Remove="Migrations\20200211102241_initial-five.cs" />
-    <Compile Remove="Migrations\20200211102241_initial-five.Designer.cs" />
-    <Compile Remove="Migrations\20200211105449_initial-five.cs" />
-    <Compile Remove="Migrations\20200211105449_initial-five.Designer.cs" />
-    <Compile Remove="Migrations\20200211130329_initial-six.cs" />
-    <Compile Remove="Migrations\20200211130329_initial-six.Designer.cs" />
-    <Compile Remove="Migrations\20200211132521_initial-seven.cs" />
-    <Compile Remove="Migrations\20200211132521_initial-seven.Designer.cs" />
-    <Compile Remove="Migrations\20200211141211_initial-three.cs" />
-    <Compile Remove="Migrations\20200211141211_initial-three.Designer.cs" />
-    <Compile Remove="Migrations\20200211141637_initial-four.cs" />
-    <Compile Remove="Migrations\20200211141637_initial-four.Designer.cs" />
-    <Compile Remove="Migrations\20200218091305_initial-five.cs" />
-    <Compile Remove="Migrations\20200218091305_initial-five.Designer.cs" />
-    <Compile Remove="Migrations\20200218102144_initial-five.cs" />
-    <Compile Remove="Migrations\20200218102144_initial-five.Designer.cs" />
-    <Compile Remove="Migrations\20200218103340_initial-five.cs" />
-    <Compile Remove="Migrations\20200218103340_initial-five.Designer.cs" />
-    <Compile Remove="Migrations\20200218123630_initial.cs" />
-    <Compile Remove="Migrations\20200218123630_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200218124516_initial.cs" />
-    <Compile Remove="Migrations\20200218124516_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200218124751_initial.cs" />
-    <Compile Remove="Migrations\20200218124751_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200219100524_Initial-Two.cs" />
-    <Compile Remove="Migrations\20200219100524_Initial-Two.Designer.cs" />
-    <Compile Remove="Migrations\20200219100924_Initial-Two.cs" />
-    <Compile Remove="Migrations\20200219100924_Initial-Two.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
   </ItemGroup>
 

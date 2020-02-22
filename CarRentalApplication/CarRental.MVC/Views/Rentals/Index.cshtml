@@ -21,13 +21,20 @@
             <th>Model</th>
             <th>Rented</th>
             <th>Returned</th>
-            <th></th>
+            <th>Days Rented</th>
+            <th>Expected Return</th>
         </tr>
     </thead>
     <tbody class="searchTable">
         @foreach (var item in Model.Rentals)
         {
-        <tr>
+            var cssClass = "";
+
+            if (DateTime.Now > item.ExpectedReturn)
+            {
+                cssClass = "class=\"red-row\"";
+            }
+        <tr @Html.Raw(cssClass)>
             <td>
                 @Html.DisplayFor(modelItem => item.MemberReference.FirstName)
             </td>
@@ -45,6 +52,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Returned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaysRented)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedReturn)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="text-dark px-1"><i class="fas fa-pen"></i></a>

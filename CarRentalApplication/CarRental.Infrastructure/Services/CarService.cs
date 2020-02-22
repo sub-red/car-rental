@@ -28,7 +28,7 @@ namespace CarRental.Infrastructure.Services
         {
             return context.CarDetails
                 .Include(x => x.CarManufacturer)
-                .Include(x => x.RentalStatus)
+                .Include(x => x.Rentals)
                 .OrderBy(x => x.CarManufacturer.Manufacturer).ToList();
         }
 

@@ -15,14 +15,12 @@ namespace CarRental.MVC.Controllers
     public class RentalsController : Controller
     {
         private readonly IRentalService rentalService;
-        private readonly IRentalLoanService rentalLoanService;
         private readonly ICarService carService;
         private readonly IMemberService memberService;
 
-        public RentalsController(IRentalService rentalService, IRentalLoanService rentalLoanService, ICarService carService, IMemberService memberService)
+        public RentalsController(IRentalService rentalService, ICarService carService, IMemberService memberService)
         {
             this.rentalService = rentalService;
-            this.rentalLoanService = rentalLoanService;
             this.carService = carService;
             this.memberService = memberService;
         }
@@ -62,11 +60,10 @@ namespace CarRental.MVC.Controllers
             {
                 var newRental = new Rentals();
                 newRental.Rented = vm.Rented;
-                newRental.Returned = vm.Returned;
-                newRental.CarReference.ManufacturerId = vm.ManufacturerId;
-                newRental.MemberReference.MemberCardId = vm.MemberCardId;
-                newRental.RentalLoanId = vm.RentalLoanId;
-
+                //newRental.Returned = vm.Returned;
+                newRental.ExpectedReturn = vm.ExpectedReturn;
+                newRental.CarReferenceId = vm.CarReferenceId;
+                newRental.MemberReferenceId = vm.MemberCardId;
 
                 rentalService.AddRental(newRental);
                 return RedirectToAction(nameof(Index));

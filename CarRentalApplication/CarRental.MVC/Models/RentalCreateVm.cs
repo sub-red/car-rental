@@ -12,14 +12,14 @@ namespace CarRental.MVC.Models
         public RentalCreateVm()
         {
             Rented = DateTime.Now;
-            Returned = DateTime.Now;
+            ExpectedReturn = DateTime.Now.AddDays(14);
         }
 
         [Display(Name = "Rented")]
         public DateTime Rented { get; set; }
 
-        [Display(Name = "Returned")]
-        public DateTime Returned { get; set; }
+        [Display(Name = "Expected return")]
+        public DateTime ExpectedReturn { get; set; }
 
         [Display(Name = "RentalCar")]
         public SelectList CarList { get; set; }
@@ -27,7 +27,7 @@ namespace CarRental.MVC.Models
         [Display(Name = "RentalMember")]
         public SelectList MembersList { get; set; }
         [Required]
-        public int ManufacturerId { get; set; }
+        public int CarReferenceId { get; set; }
 
         [Required]
         public int MemberCardId { get; set; }

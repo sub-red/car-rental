@@ -52,9 +52,6 @@ namespace CarRental.Infrastructure.Migrations
                     b.Property<string>("LicensePlate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LoanStatusId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ManufacturerId")
                         .HasColumnType("int");
 
@@ -65,8 +62,6 @@ namespace CarRental.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LoanStatusId");
 
                     b.HasIndex("ManufacturerId");
 
@@ -79,7 +74,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Black",
                             HorsePower = 140,
                             LicensePlate = "ASD123",
-                            LoanStatusId = 1,
                             ManufacturerId = 1,
                             Model = "V90",
                             Price = 500000
@@ -90,7 +84,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Silver",
                             HorsePower = 200,
                             LicensePlate = "SAD123",
-                            LoanStatusId = 1,
                             ManufacturerId = 2,
                             Model = "A3",
                             Price = 400000
@@ -101,7 +94,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Black",
                             HorsePower = 240,
                             LicensePlate = "BLA773",
-                            LoanStatusId = 1,
                             ManufacturerId = 3,
                             Model = "M5",
                             Price = 400000
@@ -112,7 +104,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Blue",
                             HorsePower = 100,
                             LicensePlate = "DSA123",
-                            LoanStatusId = 1,
                             ManufacturerId = 4,
                             Model = "Octavia",
                             Price = 50000
@@ -123,7 +114,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Grey",
                             HorsePower = 110,
                             LicensePlate = "DSA213",
-                            LoanStatusId = 1,
                             ManufacturerId = 5,
                             Model = "Corolla",
                             Price = 20000
@@ -134,7 +124,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Dark Blue",
                             HorsePower = 170,
                             LicensePlate = "SAA601",
-                            LoanStatusId = 1,
                             ManufacturerId = 6,
                             Model = "9-3",
                             Price = 5000
@@ -145,7 +134,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Green",
                             HorsePower = 80,
                             LicensePlate = "GFT154",
-                            LoanStatusId = 1,
                             ManufacturerId = 7,
                             Model = "Polo",
                             Price = 15000
@@ -156,7 +144,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "White",
                             HorsePower = 140,
                             LicensePlate = "JPN001",
-                            LoanStatusId = 1,
                             ManufacturerId = 8,
                             Model = "i30",
                             Price = 75000
@@ -167,7 +154,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Beige",
                             HorsePower = 140,
                             LicensePlate = "RUS001",
-                            LoanStatusId = 1,
                             ManufacturerId = 9,
                             Model = "Granta",
                             Price = 4000
@@ -178,7 +164,6 @@ namespace CarRental.Infrastructure.Migrations
                             Color = "Black",
                             HorsePower = 661,
                             LicensePlate = "CSH247",
-                            LoanStatusId = 1,
                             ManufacturerId = 10,
                             Model = "Spider 488",
                             Price = 750000
@@ -365,48 +350,6 @@ namespace CarRental.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CarRental.Domain.RentalLoan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("RentalStatus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RentalLoans");
-                });
-
-            modelBuilder.Entity("CarRental.Domain.RentalStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("RentalLoanStatus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RentalStatus");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            RentalLoanStatus = "Available"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            RentalLoanStatus = "Unavailable"
-                        });
-                });
-
             modelBuilder.Entity("CarRental.Domain.Rentals", b =>
                 {
                     b.Property<int>("Id")
@@ -414,19 +357,19 @@ namespace CarRental.Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CarReferenceId")
+                    b.Property<int>("CarReferenceId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("MemberReferenceId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("ExpectedReturn")
+                        .HasColumnType("datetime2");
 
-                    b.Property<int>("RentalLoanId")
+                    b.Property<int>("MemberReferenceId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Rented")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Returned")
+                    b.Property<DateTime?>("Returned")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -434,8 +377,6 @@ namespace CarRental.Infrastructure.Migrations
                     b.HasIndex("CarReferenceId");
 
                     b.HasIndex("MemberReferenceId");
-
-                    b.HasIndex("RentalLoanId");
 
                     b.ToTable("Rentals");
                 });
@@ -449,12 +390,6 @@ namespace CarRental.Infrastructure.Migrations
 
             modelBuilder.Entity("CarRental.Domain.CarDetails", b =>
                 {
-                    b.HasOne("CarRental.Domain.RentalStatus", "RentalStatus")
-                        .WithMany("Cars")
-                        .HasForeignKey("LoanStatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CarRental.Domain.CarManufacturer", "CarManufacturer")
                         .WithMany("Cars")
                         .HasForeignKey("ManufacturerId")
@@ -474,16 +409,14 @@ namespace CarRental.Infrastructure.Migrations
             modelBuilder.Entity("CarRental.Domain.Rentals", b =>
                 {
                     b.HasOne("CarRental.Domain.CarDetails", "CarReference")
-                        .WithMany()
-                        .HasForeignKey("CarReferenceId");
+                        .WithMany("Rentals")
+                        .HasForeignKey("CarReferenceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CarRental.Domain.MemberDetails", "MemberReference")
                         .WithMany()
-                        .HasForeignKey("MemberReferenceId");
-
-                    b.HasOne("CarRental.Domain.RentalLoan", "RentalLoan")
-                        .WithMany("Rentals")
-                        .HasForeignKey("RentalLoanId")
+                        .HasForeignKey("MemberReferenceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

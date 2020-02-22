@@ -45,7 +45,11 @@ namespace CarRental.Infrastructure.Services
 
         public ICollection<MemberDetails> ShowMemberDetails(int id)
         {
-            return context.MemberDetails.Where(x => x.Id == id).ToList();
+            var members = context.MemberDetails.Where(x => x.Id == id)
+                   .ToList();
+            var loans = context.Rentals.Where(x => x.MemberReferenceId == id).ToList();
+
+            return members;
         }
     }
 }

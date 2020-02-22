@@ -17,9 +17,7 @@ namespace CarRental.Infrastructure.Persistence
         public DbSet<CarManufacturer> CarManufacturers { get; set; }
         public DbSet<MemberDetails> MemberDetails { get; set; }
         public DbSet<MemberCard> MemberCard { get; set; }
-        public DbSet<RentalLoan> RentalLoans { get; set; }
         public DbSet<Rentals> Rentals { get; set; }
-        public DbSet<RentalStatus> RentalStatus { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,10 +27,8 @@ namespace CarRental.Infrastructure.Persistence
 
             ConfigureMemberCard(modelBuilder);
             ConfigureMemberDetails(modelBuilder);
-            /*
-            ConfigureRentalLoan(modelBuilder);
+
             ConfigureRentals(modelBuilder);
-            */
             SeedDatabase(modelBuilder);
 
             base.OnModelCreating(modelBuilder);
@@ -63,8 +59,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "V90",
                     HorsePower = 140,
                     LicensePlate = "ASD123",
-                    Price = 500000,
-                    LoanStatusId = 1
+                    Price = 500000
                 },
                 new CarDetails
                 {
@@ -74,8 +69,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "A3",
                     HorsePower = 200,
                     LicensePlate = "SAD123",
-                    Price = 400000,
-                    LoanStatusId = 1
+                    Price = 400000
                 },
                 new CarDetails
                 {
@@ -85,8 +79,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "M5",
                     HorsePower = 240,
                     LicensePlate = "BLA773",
-                    Price = 400000,
-                    LoanStatusId = 1
+                    Price = 400000
                 },
                 new CarDetails
                 {
@@ -96,8 +89,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "Octavia",
                     HorsePower = 100,
                     LicensePlate = "DSA123",
-                    Price = 50000,
-                    LoanStatusId = 1
+                    Price = 50000
                 },
                 new CarDetails
                 {
@@ -107,8 +99,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "Corolla",
                     HorsePower = 110,
                     LicensePlate = "DSA213",
-                    Price = 20000,
-                    LoanStatusId = 1
+                    Price = 20000
                 },
                 new CarDetails
                 {
@@ -118,8 +109,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "9-3",
                     HorsePower = 170,
                     LicensePlate = "SAA601",
-                    Price = 5000,
-                    LoanStatusId = 1
+                    Price = 5000
                 },
                 new CarDetails
                 {
@@ -129,8 +119,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "Polo",
                     HorsePower = 80,
                     LicensePlate = "GFT154",
-                    Price = 15000,
-                    LoanStatusId = 1
+                    Price = 15000
                 },
                 new CarDetails
                 {
@@ -140,8 +129,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "i30",
                     HorsePower = 140,
                     LicensePlate = "JPN001",
-                    Price = 75000,
-                    LoanStatusId = 1
+                    Price = 75000
                 },
                 new CarDetails
                 {
@@ -151,8 +139,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "Granta",
                     HorsePower = 140,
                     LicensePlate = "RUS001",
-                    Price = 4000,
-                    LoanStatusId = 1
+                    Price = 4000
                 },
                 new CarDetails
                 {
@@ -162,8 +149,7 @@ namespace CarRental.Infrastructure.Persistence
                     Model = "Spider 488",
                     HorsePower = 661,
                     LicensePlate = "CSH247",
-                    Price = 750000,
-                    LoanStatusId = 1
+                    Price = 750000
                 }
                 );
 
@@ -217,22 +203,18 @@ namespace CarRental.Infrastructure.Persistence
                     DriversLicense = 2212
                 }
                 );
-            modelBuilder.Entity<Rentals>().HasData(
-                    new Rentals
-                    {
-                        Id = 1,
-                        RentalLoanId = 1,
-                        Rented = DateTime.Now,
-                        Returned = DateTime.Now,
-                        
-                    }
-                    );
 
-            modelBuilder.Entity<RentalStatus>().HasData(
-                new RentalStatus { Id = 1, RentalLoanStatus = "Available" },
-                new RentalStatus { Id = 2, RentalLoanStatus = "Unavailable" }
+            //modelBuilder.Entity<Rentals>().HasData(
+            //        new Rentals
+            //        {
+            //            Id = 1,
+            //            Rented = DateTime.Now,
+            //            Returned = null,
 
-                );
+            //        }
+            //        );
+
+
             /*
             modelBuilder.Entity<Rentals>().HasData(
                 new Rentals { Id = 1, Rented = DateTime.Now}
@@ -272,25 +254,15 @@ namespace CarRental.Infrastructure.Persistence
         private static void ConfigureRentalStatus(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CarDetails>().HasKey(x => x.Id);
-            modelBuilder.Entity<CarDetails>()
-                .HasOne(b => b.RentalStatus)
-                .WithMany(a => a.Cars)
-                .HasForeignKey(b => b.LoanStatusId);
-        }
-        /*
-        private static void ConfigureRentalLoan(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<RentalLoan>().Property(x => x.RentalStatus).HasMaxLength(55);
         }
 
         private static void ConfigureRentals(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Rentals>().HasKey(x => x.Id);
             modelBuilder.Entity<Rentals>()
-                .HasOne(b => b.RentalLoan)
+                .HasOne(b => b.CarReference)
                 .WithMany(a => a.Rentals)
                 .HasForeignKey(b => b.CarReferenceId);
         }
-        */
     }
 }

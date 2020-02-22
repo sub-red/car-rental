@@ -15,5 +15,6 @@ namespace CarRental.Domain
         public int MemberCardId { get; set; }
         public string FullName => $"{FirstName} {LastName}";
         public MemberCard MemberCard { get; set; }
+        public IList<Rentals> Rentals { get; set; }
     }
 }

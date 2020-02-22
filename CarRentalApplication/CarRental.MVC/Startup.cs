@@ -32,7 +32,6 @@ namespace CarRental.MVC
             services.AddScoped<IMemberService, MemberService>();
             services.AddScoped<IMemberCardService, MemberCardService>();
             services.AddScoped<IRentalService, RentalService>();
-            services.AddScoped<IRentalLoanService, RentalLoanService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("CarRental"),
